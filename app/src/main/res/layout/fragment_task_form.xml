@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="task"
+            type="com.creasmit.task.data.model.Task" />
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context=".view.fragment.TaskFormFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="200dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="339dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Description" />
+
+            <EditText
+                android:id="@+id/txt_description"
+                android:layout_gravity="center"
+                android:layout_width="339dp"
+                android:layout_height="wrap_content"
+                android:text="@={task.description}" />
+
+            <TextView
+                android:layout_width="339dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Durée" />
+
+            <EditText
+                android:id="@+id/txt_delay"
+                android:layout_gravity="center"
+                android:layout_width="339dp"
+                android:layout_height="wrap_content"
+                android:text="@={task.delay}" />
+
+            <TextView
+                android:id="@+id/add"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="#2196F3"
+                android:layout_width="339dp"
+                android:layout_height="wrap_content"
+                android:text="Ajouter" />
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

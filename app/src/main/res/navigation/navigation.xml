@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listTaskFragment">
 
+    <fragment
+        android:id="@+id/listTaskFragment"
+        android:name="com.creasmit.task.view.fragment.ListTaskFragment"
+        android:label="fragment_list_task"
+        tools:layout="@layout/fragment_list_task" >
+        <action
+            android:id="@+id/action_listTaskFragment_to_taskFormFragment"
+            app:destination="@id/taskFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskFormFragment"
+        android:name="com.creasmit.task.view.fragment.TaskFormFragment"
+        android:label="TaskFormFragment"
+        tools:layout="@layout/fragment_task_form"
+        >
+        <action
+            android:id="@+id/action_taskFormFragment_to_listTaskFragment"
+            app:destination="@id/listTaskFragment" />
+    </fragment>
 </navigation>
